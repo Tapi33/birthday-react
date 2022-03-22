@@ -8,10 +8,12 @@ const FormBirthday = () => {
         month: 1,
 
     })
+
+
     return (
-        <div className='page'>
-            <form action="">
-                <input 
+        <div>
+            <form className="form-birthday">
+                <input
                     type="text"
                     placeholder="Enter name"
                     value={newBirthday.name}
@@ -25,9 +27,8 @@ const FormBirthday = () => {
                     max={31}
                     min={1}
                 />
-                <select value={newBirthday.month} onChange={e=> setNewBirthday({...newBirthday, month: +e.target.value})}>
-                    <option value=''>Select Month</option>
-                    <option selected value='1'>January</option>
+                <select value={newBirthday.month} onChange={e => setNewBirthday({...newBirthday, month: +e.target.value})}>
+                    <option defaultValue value='1'>January</option>
                     <option value='2'>February</option>
                     <option value='3'>March</option>
                     <option value='4'>April</option>
@@ -40,8 +41,11 @@ const FormBirthday = () => {
                     <option value='11'>November</option>
                     <option value='12'>December</option>
                 </select>
-                <Link to={`birthday/${newBirthday.name}/${newBirthday.day}/${newBirthday.month}`}>
-                    <button>Accept</button>
+                <Link
+                    to={`birthday/${newBirthday.name === '' ? 'Anonymous' : newBirthday.name}/${newBirthday.day}/${newBirthday.month}`}>
+                    <button>
+                        Accept
+                    </button>
                 </Link>
             </form>
         </div>

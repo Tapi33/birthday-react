@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import CountDown from "./CountDown";
 
 const Birthday = () => {
@@ -16,7 +16,7 @@ const Birthday = () => {
     const currentTime = new Date();
     const currentYear = new Date().getFullYear();
 
-    const isItBirthday = currentTime.getDate() === day && currentTime.getMonth() === month - 1;
+    let isItBirthday = currentTime.getDate() === +day && currentTime.getMonth() === +month - 1;
 
     useEffect(() => {
         setInterval(() => {
@@ -89,6 +89,9 @@ const Birthday = () => {
             <div className="birthday_date">
                 Birth-Day: {day} {monthBday} {}
             </div>
+            <Link to={'/'}>
+                <button>new FormBirthday</button>
+            </Link>
         </div>
     );
 };
