@@ -6,7 +6,7 @@ const CountDown = ({countDate, name}) => {
         return (
             <div className="countdown-wrapper">
                 <h1 className="countdown-header">
-                    CountDown to <span>{name}'s</span> Birthday
+                    Count-Down to <span>{name}'s</span> Birthday
                 </h1>
                 <div className="countdown">
                     <div className="countdown-box">
@@ -14,15 +14,15 @@ const CountDown = ({countDate, name}) => {
                         <span className="countdown-box-title">Days</span>
                     </div>
                     <div className="countdown-box">
-                        {countDate.hours}
+                        {countDate.hours > 9 ? countDate.hours : '0'+countDate.hours}
                         <span className="countdown-box-title">Hours</span>
                     </div>
                     <div className="countdown-box">
-                        {countDate.minutes}
+                        {countDate.minutes > 9 ? countDate.minutes : '0'+countDate.minutes}
                         <span className="countdown-box-title">Minutes</span>
                     </div>
                     <div className="countdown-box">
-                        {countDate.second}
+                        {countDate.second > 9 ? countDate.second : '0'+countDate.second}
                         <span className="countdown-box-title">Seconds</span>
                     </div>
                 </div>

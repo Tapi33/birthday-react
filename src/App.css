@@ -35,7 +35,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.form-birthday > input,select{
+.form-birthday > input{
   width: 250px;
   height: 50px;
   padding-left: 10px;
@@ -44,17 +44,89 @@
   background: inherit;
   border: 1px solid #fafafa;
   color: #fafafa;
+  font-size: 16px ;
 }
 .form-birthday > input:focus{
   outline: none;
+}
+.form-birthday > select{
+  width: 250px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background: inherit;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  font-size: 16px ;
+}
+.form-birthday > select:focus{
+  color: #000;
 }
 .form-birthday > a>button{
   width: 200px;
   height: 50px;
   border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.form-birthday > a>button:hover{
+  background-color: transparent;
+  border: 1px solid #fafafa;
+  color: #fafafa;
 }
 .countdown-wrapper{
-  width: 25rem;
+  width: 50rem;
+  height: 250px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+.birthday-wrapper{
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.countdown{
+  display: flex;
+  justify-content: space-between;
+}
+.countdown-box{
+  width: 120px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 38px;
+  color: #fafafa;
+}
+.countdown-header{
+  font-size: 48px;
+  color: lightgoldenrodyellow;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.countdown-header> span{
+  color: lightcoral;
+}
+.birthday-date{
+  font-size: 30px;
+  color: lightyellow;
+}
+.birthday-btn{
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.birthday-btn:hover{
+  background-color: transparent;
+  border: 1px solid #fafafa;
+  color: #fafafa;
 }
