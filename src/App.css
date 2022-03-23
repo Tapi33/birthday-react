@@ -76,15 +76,15 @@
   color: #fafafa;
 }
 .countdown-wrapper{
-  width: 50rem;
-  height: 250px;
+  max-width: 50rem;
+  height: 280px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 .birthday-wrapper{
-  width: 1000px;
-  height: 500px;
+  width: 90%;
+  min-height: 550px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -94,10 +94,12 @@
 .countdown{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 100px;
 }
 .countdown-box{
-  width: 120px;
-  height: 100px;
+  max-width: 24rem;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,4 +131,39 @@
   background-color: transparent;
   border: 1px solid #fafafa;
   color: #fafafa;
+}
+@media (max-width: 900px) {
+  .App{
+    align-items: start;
+  }
+}
+@media (max-width: 694px) {
+  .countdown-header{
+    font-size: 30px;
+  }
+  .countdown-box{
+    font-size: 28px;
+  }
+  .countdown-wrapper{
+    height: 200px;
+  }
+  .birthday-date{
+    font-size: 20px;
+  }
+  .birthday-btn{
+    width: 160px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .countdown-box{
+    font-size: 20px;
+  }
+  .countdown-header{
+    font-size: 25px;
+  }
+  .birthday-wrapper{
+    min-height: 430px;
+  }
 }
