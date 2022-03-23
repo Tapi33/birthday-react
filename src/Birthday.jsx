@@ -84,13 +84,13 @@ const Birthday = () => {
     let monthBday = monthNames[birth.getMonth()];
 
     return (
-        <div className='page'>
+        <div className="birthday-wrapper">
             <CountDown countDate={time} name={name}/>
-            <div className="birthday_date">
-                Birth-Day: {day} {monthBday} {}
+            <div className="birthday-date">
+                BirthDay: {day} {monthBday} {}
             </div>
             <Link to={'/'}>
-                <button>new FormBirthday</button>
+                <button className="birthday-btn">Create new</button>
             </Link>
         </div>
     );
