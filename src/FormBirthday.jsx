@@ -11,7 +11,7 @@ const FormBirthday = () => {
 
 
     return (
-        <div>
+        <div className="form_wrapper">
             <form className="form-birthday">
                 <input
                     type="text"

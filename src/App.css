@@ -1,16 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
-  border: none
+  border: none;
+  font-family: 'Fredoka', sans-serif;
+
 }
 .App{
-  background-color: rgba(0,0,0,0.82);
+  background-color: rgba(0,0,0,0.80);
+  height: 947px;
+  display: flex;
+  align-items: center;
 }
-.form-birthday{
+.form_wrapper{
   width: 500px;
   height: 600px;
   margin: 0 auto;
-  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  background-color:rgba(54,54,54,0.76);
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(106,106,106,0.76);
+
+}
+.form-birthday{
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-birthday > input,select{
+  width: 250px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background: inherit;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+}
+.form-birthday > input:focus{
+  outline: none;
+}
+.form-birthday > a>button{
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+}
+.countdown-wrapper{
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
 }
