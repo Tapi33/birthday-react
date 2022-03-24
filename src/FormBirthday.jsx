@@ -9,10 +9,6 @@ const FormBirthday = () => {
 
     })
 
-    const test = () =>{
-
-    }
-
     return (
         <div className="form_wrapper">
             <form className="form-birthday">
