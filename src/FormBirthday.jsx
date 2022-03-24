@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
+import {logDOM} from "@testing-library/react";
 
 const FormBirthday = () => {
     const [newBirthday, setNewBirthday] = useState({
@@ -9,6 +10,9 @@ const FormBirthday = () => {
 
     })
 
+    const test = () =>{
+
+    }
 
     return (
         <div className="form_wrapper">
@@ -41,8 +45,7 @@ const FormBirthday = () => {
                     <option value='11'>November</option>
                     <option value='12'>December</option>
                 </select>
-                <Link
-                    to={`birthday/${newBirthday.name === '' ? 'Anonymous' : newBirthday.name}/${newBirthday.day}/${newBirthday.month}`}>
+                <Link to={`birthday/${newBirthday.name === '' ? 'Anonymous' : newBirthday.name}/${newBirthday.day}/${newBirthday.month}`}>
                     <button>
                         Accept
                     </button>
